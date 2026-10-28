@@ -1,0 +1,32 @@
+﻿<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+        x:Class="CalcoloAree.MainWindow"
+        Title="CalcoloAree"
+        WindowStartupLocation="CenterScreen" Background="#F3F5FA">
+        <ScrollViewer> 
+            <StackPanel Margin="32" Spacing="16">
+            <TextBlock Text="CALCOLATORE AREA E PERIMETRO" FontWeight="Bold" Foreground="Black"></TextBlock>
+            <TextBlock Text="SELEZIONA IL TIPO DI FIGURA" Foreground="Black"></TextBlock>
+                <ComboBox x:Name="FiguraSelezionata" SelectionChanged="FiguraSelezionata_SelectionIndex"  Width="300" PlaceholderText="FIGURA" SelectedIndex="0" Foreground="Black" BorderBrush="Black">
+                    <ComboBoxItem Content="-- SELEZIONA FIGURA --"></ComboBoxItem>
+                <ComboBoxItem Content="Rettangolo"></ComboBoxItem>
+                 <ComboBoxItem Content="Quadrato"></ComboBoxItem>
+                    <ComboBoxItem Content="Cerchio"></ComboBoxItem>
+                </ComboBox>
+                <TextBlock x:Name="LblCampo1" Text="Misura 1:" Foreground="Black"></TextBlock>
+                <TextBox x:Name="TxtCampo1"></TextBox>
+
+                <TextBlock x:Name="LblCampo2" Text="Misura :" Foreground="Black"></TextBlock>
+                <TextBox x:Name="TxtCampo2"></TextBox>
+
+                
+                <Button Content="CALCOLA AREA E PERIMETRO" Click="Calcola" Padding="22,10" BorderBrush="Black" Foreground="Black"></Button>
+                
+                    <TextBlock x:Name="TxtRisultato" Foreground="Black" ></TextBlock>
+                
+            </StackPanel >
+        </ScrollViewer>
+</Window>
